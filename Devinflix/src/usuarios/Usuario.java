@@ -5,9 +5,9 @@ import filmes.Filme;
 import java.util.ArrayList;
 
 public class Usuario {
-    private String nome;
-    private String endereco;
-    private String dataNascimento;
+    protected String nome;
+    protected String endereco;
+    protected String dataNascimento;
 
     public Usuario( String nome, String endereco, String dataNascimento ) {
         this.nome = nome;
@@ -47,5 +47,9 @@ public class Usuario {
                 ", endereco='" + endereco + '\'' +
                 ", dataNascimento='" + dataNascimento + '\'' +
                 '}';
+    }
+
+    public void recomendarFilme(Filme filme, String motivo) {
+        System.out.println(this.nome + " recomendou o filme " + filme.getTitulo() + " porque " + motivo);
     }
 }
